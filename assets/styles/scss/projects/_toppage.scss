@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@use '../foundation/root' as *; 
+@use '../foundation/root' as *;
 @use '../foundation/base' as *;
 @use '../foundation/variables' as *;
 @use '../foundation/mixins' as *;
@@ -190,6 +190,14 @@
   border-left-width: 3px;
   border-left-style: solid;
   border-image: linear-gradient(to bottom, #fff 0%, #fff 5%, #B7C4C4 5%, #B7C4C4 95%, #fff 100%) 1;
+
+  @include media-query('lg', max-width) {
+    border-image: linear-gradient(to bottom, #fff 0%, #fff 4%, #B7C4C4 4%, #B7C4C4 95%, #fff 100%) 1;
+  }
+
+  @include media-query('md', max-width) {
+    border-image: linear-gradient(to bottom, #fff 0%, #fff 3%, #B7C4C4 3%, #B7C4C4 95%, #fff 100%) 1;
+  }
 }
 
 .history-list .__item {
