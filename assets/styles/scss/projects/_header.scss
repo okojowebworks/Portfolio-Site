@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+@use '../foundation/root' as *;
+@use '../foundation/base' as *;
+@use '../foundation/variables' as *;
+@use '../foundation/mixins' as *;
+@use '../foundation/reset' as *;
+@use '../foundation/function' as *;
+
+@use '../layout/header' as *;
+@use '../layout/footer' as *;
+@use '../utilities/borders' as *;
+@use '../utilities/typography' as *;
+@use '../utilities/display' as *;
+
+
+/* -------------------------------
+ *  header
+ * ---------------------------- */
+
+.logo__img-wrapper
+{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    margin-right: 16px;
+    margin: 0 auto;
+}
+.header__logo {
+
+    > a {
+      display: flex;
+      align-items: flex-end;
+      line-height: $line-height-100;
+      font-size: $font-M;
+      color: var(--color-text-black);
+
+    }
+
+    @include media-query('md', max-width) {
+        height: auto;
+    }
+}
+
+/*上に上がる動き*/
+
+#header.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime{
+  from {
+    opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+	transform: translateY(-100px);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#header.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+  	opacity: 0;
+	transform: translateY(-100px);
+  }
+  to {
+  	opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+
+/*-----------------------------------*/
+/* global nav  c-hamburger-btn
+/*-----------------------------------*/
+
+.c-gnav_list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.c-gnav_list {
+    a {
+        color: var(--color-text-black);
+        font-size: $font-L;
+        transition: all 0.5s;
+
+        @include hover-style {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+/*-----------------------------------*/
+
+@include media-query('md', max-width) {
+
+    /*========= ナビゲーションのCSS ===============*/
+    #gnav {
+        position: fixed;
+        z-index: layer-order('drawer');
+        /*ナビのスタート位置と形状*/
+        top: rem(63);
+        right: -120vw;
+        width: 100vw;
+        height: 60svh;
+        /*ナビの高さ*/
+        background: var(--color-primary);
+        transition: all 0.8s;
+    }
+
+    /*アクティブクラスがついたら位置をheader下に*/
+    #gnav.panelactive {
+        right: 0;
+    }
+
+    /*ナビゲーション*/
+    #gnav ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /*リストのレイアウト設定*/
+    #gnav li {
+        list-style: none;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    #gnav li a {
+        color: var(--color-text-black);
+        text-decoration: none;
+        padding: 8px;
+        display: block;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        font-size: $font-XL;
+    }
+
+    /*========= ボタンのCSS ===============*/
+    .c-hamburger-btn {
+        position: fixed;
+        z-index: layer-order('drawer') + 1;
+        // /*ボタンを最前面に*/
+        top: 10px;
+        right: 6px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+    }
+
+    /*×に変化*/
+    .c-hamburger-btn span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #666;
+        width: 45%;
+    }
+
+    .c-hamburger-btn span:nth-of-type(1) {
+        top: 15px;
+    }
+
+    .c-hamburger-btn span:nth-of-type(2) {
+        top: 23px;
+    }
+
+    .c-hamburger-btn span:nth-of-type(3) {
+        top: 31px;
+    }
+
+    .c-hamburger-btn.active span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+
+    .c-hamburger-btn.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .c-hamburger-btn.active span:nth-of-type(3) {
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+    }
+
+}

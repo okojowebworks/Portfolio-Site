@@ -1,0 +1,375 @@
+@charset "UTF-8";
+
+@use '../foundation/root' as *; 
+@use '../foundation/base' as *;
+@use '../foundation/variables' as *;
+@use '../foundation/mixins' as *;
+@use '../foundation/reset' as *;
+@use '../foundation/function' as *;
+
+@use '../layout/header' as *;
+@use '../layout/footer' as *;
+
+@use '../projects/footer' as *;
+@use '../projects/common' as *;
+
+@use '../utilities/borders' as *;
+@use '../utilities/typography' as *;
+@use '../utilities/display' as *;
+@use '../utilities/margin' as *;
+@use '../utilities/padding' as *;
+
+
+/* -------------------------------
+ *  toppage 内 共通スタイル
+ * ---------------------------- */
+
+.container {
+  max-width: rem(1000);
+  margin: 0 auto;
+  place-content: center;
+  place-items: center;
+  padding-right: rem(16);
+  padding-left: rem(16);
+
+  @include media-query('md', max-width) {
+    width: 100vw;
+  }
+}
+
+.section__title span {
+  display: block;
+  text-align: center;
+}
+
+.section__title {
+  font-size: 32px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  text-align: center;
+
+  @include media-query('md', max-width) {
+    margin-top: 32px;
+    margin-bottom: 18px;
+  }
+
+  .section__title-en {
+    font-size: 20px;
+    color: var(--color-primary);
+    font-weight: 600; //semi-bold
+
+    @include media-query('md', max-width) {
+      font-size: 16px;
+    }
+  }
+
+  .section__title-jp {
+    margin-top: 8px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-black);
+
+    @include media-query('md', max-width) {
+      margin-top: 2px;
+      font-size: 20px;
+    }
+  }
+}
+
+/* -------------------------------
+ *  mainvisual
+ * ---------------------------- */
+
+.mv__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.mv__imgWrapper,
+.mv__text {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.mv__text {
+  display: inline-flex;
+  align-self: end;
+  justify-self: start;
+  color: var(--color-text-white);
+  margin-bottom: 9%;
+  margin-left: 12%;
+
+  @include media-query('md', max-width) {
+    margin-left: 8%;
+    margin-bottom: 30%;
+  }
+}
+
+.mv__name {
+  display: inline-block;
+  font-size: $font-5XL;
+  line-height: $line-height-100;
+  text-shadow: 1px 2px 3px #aca763;
+
+}
+
+.mv__job {
+  display: inline-block;
+  font-size: $font-4XL;
+  line-height: $line-height-100;
+  text-shadow: 1px 2px 3px #aca763;
+}
+
+/* -------------------------------
+ *  profile
+ * ---------------------------- */
+.profile__container {
+  width: 65%;
+  max-width: rem(800);
+  margin: 0 auto;
+}
+
+.profile__content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: $space-XL;
+
+  @include media-query('md', max-width) {
+    grid-template-columns: 1fr;
+    row-gap: $space-M;
+  }
+}
+
+.profile__img-wrapper {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  justify-self: center;
+
+  margin-top: 48px;
+  box-shadow: 2px 4px 8px rgb(57, 64, 57);
+}
+
+.profile__img-wrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile__img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*  -------------------------------
+ *  about / history
+ *  ---------------------------- */
+.about__text {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.history__text {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+  margin-top: $space-M;
+}
+
+.section__subtitle+p {
+  margin-top: $space-S;
+}
+
+
+.history-list {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-image: linear-gradient(to bottom, #fff 0%, #fff 5%, #B7C4C4 5%, #B7C4C4 95%, #fff 100%) 1;
+}
+
+.history-list .__item {
+  display: inline-block;
+  margin-top: $space-2XS;
+  padding-left: $space-S;
+  position: relative;
+  height: 20px;
+
+  &::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background: #4F817A;
+    position: absolute;
+    left: -7px;
+    top: 8px;
+    border: 1px solid #B7C4C4;
+  }
+}
+
+/*  -------------------------------
+ *  works
+ *  ---------------------------- */
+
+.works__wrapper {
+  background-color: var(--color-bg-sub);
+  overflow: hidden;
+  margin-top: rem(80);
+  padding-top: rem(40);
+  padding-bottom: rem(80);
+}
+
+.works__container {
+  width: 78%;
+}
+
+.works__content {
+  @include media-query('md', max-width) {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: $space-M;
+  }
+}
+
+.works__item {
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+
+  background-color: var(--color-white);
+  border: 0.0625rem solid #ccc;
+  padding: $space-XS;
+
+  box-shadow: 1px 2px 3px var(--color-gray-ddd);
+
+  @include media-query('md', max-width) {
+    row-gap: $space-3XS;
+    padding: $space-M;
+
+  }
+
+  @include hover-style {
+    opacity: .7;
+  }
+}
+
+.works__work-title {
+  font-size: $font-R;
+  line-height: 1.4;
+
+  span {
+    font-size: $font-S;
+  }
+}
+
+.works__item p {
+  border-top: 1px dotted var(--color-gray-ddd);
+  padding-top: $space-2XS;
+  line-height: 1.6;
+}
+
+.works__item p:not(:first-child) {
+  margin-top: $space-3XS;
+}
+
+.fsz-s {
+  font-size: $font-S;
+}
+
+/* -------------------------------
+ *  Skills
+ * ---------------------------- */
+.skills {
+  margin-bottom: $space-XL;
+}
+
+.section__subtitle-jp {
+  @extend .section__subtitle;
+  font-size: $font-M;
+  display: block;
+  text-align: center;
+  color: var(--color-accent);
+}
+
+.skills__container {
+  width: 70%;
+  max-width: rem(800);
+}
+
+.skills__contents {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  align-items: center;
+  column-gap: $space-M;
+  row-gap: $space-M;
+
+  @include media-query('md', max-width) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skills__icons {
+  @extend .sp-display-none;
+}
+
+.skills__icons-wpandphp {
+  width: 50%;
+  justify-self: center;
+}
+
+/* -------------------------------
+ *  contact
+ * ---------------------------- */
+
+.contact__bg__wrapper {
+  width: 100%;
+}
+
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.contact__bg__wrapper,
+.contact__button {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+/* -------------------------------
+ *  button - contact
+ * ---------------------------- */
+
+
+.contact__button {
+  display: inline-block;
+
+  justify-self: center;
+  align-self: center;
+
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+
+  z-index: 1;
+  position: relative;
+  /* z-indexを有効にする */
+
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  font-size: $font-2XL;
+  border-radius: 9999px;
+  text-align: center;
+  line-height: 3.75rem;
+  transition: background-color 0.3s ease;
+
+  @include hover-style {
+    background-color: rgb(255, 255, 255, .2);
+  }
+}

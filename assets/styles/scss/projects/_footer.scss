@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+@use '../foundation/root' as *; //rootファイルの読み込み
+@use '../foundation/base' as *;
+@use '../foundation/variables' as *;
+@use '../foundation/mixins' as *;
+@use '../foundation/reset' as *;
+@use '../foundation/function' as *;
+
+@use '../layout/header' as *;
+@use '../layout/footer' as *;
+@use '../utilities/borders' as *;
+@use '../utilities/typography' as *;
+@use '../utilities/_display' as *;
+@use '../utilities/margin' as *;
+@use '../utilities/padding' as *;
+
+
+
+/* -------------------------------
+ *  footer
+ * ---------------------------- */
+
+.footer {
+    background-color: var(--color-primary);
+    height: rem(64);
+    display: flex;
+    align-items: center;
+    text-align: center;
+}

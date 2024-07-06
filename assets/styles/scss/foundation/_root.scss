@@ -1,0 +1,35 @@
+:root {
+
+  /*font-size root */
+  --font-size: 16px;
+
+  /* color */
+  /* -------------------------------
+  *  custom style for this site
+  * ---------------------------- */
+  --color-primary: #B3B6A1; //header&footer color
+  --color-bg-main: #FCFEF6; //main background color
+  --color-bg-sub: #F2F2F2; //sub background color
+
+  --color-accent: #A45F5F; //title color
+
+  --color-text-black: #333;
+  --color-text-white: #fff;
+
+  /* -------------------------------
+  *  base color
+  * ---------------------------- */
+  --color-white: #fff;
+  --color-white-rgb: 255, 255, 255;
+
+  --color-black: #000;
+  --color-black-rgb: 0, 0, 0;
+
+  --color-gray-111: #111;
+  --color-gray-222: #222;
+  --color-gray-333: #333;
+  --color-gray-ccc: #ccc;
+  --color-gray-ddd: #ddd; //border color
+  --color-gray-eee: #eee; //pagenation color
+
+}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@use '../foundation/root' as *; //rootファイルの読み込み color css変数
+@use '../foundation/variables' as *; //変数ファイルの読み込み
+@use '../foundation/mixins' as *; //mixinファイルの読み込み
+
+/* -------------------------------
+ *  Border Radius
+ * ---------------------------- */
+
+.rounded-none {border-radius: 0px};
+
+.rounded {border-radius: 0.25rem;} /* 4px */
+.rounded-lg {border-radius: 0.5rem;} /* 8px */
+.rounded-2xl {border-radius: 1rem;} /* 16px */
+.rounded-3xl {border-radius: 1.5rem;} /* 24px */
+.rounded-full {border-radius: 9999px;} 
+
+.rounded-tr-40 {border-top-right-radius: 2.5rem;} /* 40px */

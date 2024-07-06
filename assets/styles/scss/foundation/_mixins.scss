@@ -1,0 +1,29 @@
+@use "variables" as *;
+
+/* -------------------------------
+ *  media query
+ * ---------------------------- */
+//breakpointの指定
+@mixin media-query($breakpoint-key, $rule) {
+    @if $rule ==max-width {
+        @media (max-width: calc(#{map-get($breakpoint-list, $breakpoint-key)}px - 1px)) {
+            @content;
+        }
+    }
+
+    @else if $rule ==min-width {
+        @media (min-width: #{map-get($breakpoint-list, $breakpoint-key)}px) {
+            @content;
+        }
+    }
+}
+
+
+//hover/pointer 効く時のみhoverスタイル適用
+@mixin hover-style {
+    @media(hover: hover) and (pointer: fine) {
+        &:hover {
+            @content;
+        }
+    } 
+}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@use '../styles/scss/foundation/root' as *; 
+@use '../styles/scss/foundation/base' as *;
+@use '../styles/scss/foundation/variables' as *;
+@use '../styles/scss/foundation/mixins' as *;
+@use '../styles/scss/foundation/reset' as *;
+@use '../styles/scss/foundation/function' as *;
+
+@use '../styles/scss/utilities/borders' as *;
+@use '../styles/scss/utilities/typography' as *;
+@use '../styles/scss/utilities/display' as *;
+@use '../styles/scss/utilities/margin' as *;
+@use '../styles/scss/utilities/padding' as *;
+
+@use '../styles/scss/projects/common' as *;
+@use '../styles/scss/projects/header' as *;
+@use '../styles/scss/projects/footer' as *;
+@use '../styles/scss/projects/toppage' as *; 

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HirokoKOIZUMI ポートフォリオサイト</title>
+  <meta name="description" content="HirokoKOIZUMIのポートフォリオサイトです。">
+  <link rel="icon" href="./assets/images/SVG/favicon.svg" type="image/svg+xml">
+  <!-- OG -->
+  <meta property="og:title" content="ポートフォリオ | HirokoKOIZUMI">
+  <meta property="og:description" content="HirokoKOIZUMIのポートフォリオサイトです。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://example.com">
+  <meta property="og:site_name" content="HirokoKOIZUMI portfolio">
+  <!-- webフォント指定 -->
+  <!-- Philosopher - Noto Sans - Noto Sans Japanese -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Lora -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+  <!-- リセットCSS -->
+  <!-- A modern CSS reset -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-css-reset/dist/reset.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- 独自cssファイル指定 -->
+  <link rel="stylesheet" href="./assets/styles/style.min.css">
+</head>
+
+<body>
+  <!-- #header -->
+  <header id="header" class="l-header">
+    <div class="l-header__container">
+      <h1 class="header__logo scroll__header__logo">
+        <a href="/" class="">
+          <span class="logo__img-wrapper">
+            <img src="./assets/images/SVG/logo.svg" alt="">
+          </span>
+          <span class="Lora italic fw-medium">okojo<br>webworks</span>
+        </a>
+      </h1>
+      <nav id="gnav" class="c-gnav">
+        <div class="c-hamburger-btn"><span></span><span></span><span></span></div>
+        <ul class="c-gnav_list">
+          <li><a href="#mainVisual" class="Philosopher pc-display-none">top</a></li>
+          <li><a href="#profile" class="Philosopher">Profile</a></li>
+          <li><a href="#works" class="Philosopher">Works</a></li>
+          <li><a href="#skills" class="Philosopher">Skills</a></li>
+          <li><a href="#contact" class="Philosopher">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- #main visual -->
+  <main>
+    <section id="mainVisual" class="mainVisual">
+      <div class="mv__wrapper">
+        <picture class="mv__imgWrapper">
+          <source media="(max-width: 768px)" srcset="./assets/images/mv_sp.jpg">
+          <img src="./assets/images/mv_pc.jpg" alt="メインビジュアル" class="mainVisual__img">
+        </picture>
+        <div class="mv__text flex-column-center">
+          <h2 class="mv__name Philosopher flex-column-center">Hiroko KOIZUMI</h2>
+          <span class="mv__job Philosopher">web coder</span>
+        </div>
+      </div>
+    </section>
+    <section id="profile" class="profile">
+      <div class="profile__container">
+        <h2 class="section__title Philosopher">Profile</h2>
+        <div class="profile__content">
+          <div class="profile__img-wrapper">
+            <img src="./assets/images/prof-pht.jpg" alt="">
+          </div>
+          <div class="profile__text">
+            <div class="about__text">
+              <h3 class="section__subtitle Philosopher">About</h3>
+              <p>
+                山が好きで月2、3回ペースで東京から地方へ山旅をしているうち、PCさえあればどこででもできる仕事に憧れるようになる。<br>モノ作りがしたかったことと、地道な作業が割と好きなため、Webコーダーが向いているかもと思い独学を開始。文字だけでビジュアル作品が作れることに感動し、仕事にすることを決意。<br>自分の好きを生かし得意を伸ばして、お客様に喜んでいただける素敵な作品を作りたいと思っています。
+              </p>
+            </div>
+            <div id="history" class="history__text">
+              <h3 class="section__subtitle Philosopher">MyHistory</h3>
+              <ul class="history-list">
+                <li class="__item">青森県出身。</li>
+                <li class="__item">大学卒業後SIerに就職するが、配属先が特殊でプログラミングはほとんどしていない。
+                </li>
+                <li class="__item">旅行業界へ転職し、海外渡航手配業務に約8年間従事、年間約千人を渡航手配するが、自身はまったく休みが取れず働き方を考え直す。</li>
+                <li class="__item">趣味で演奏していた雅楽をさらに学ぶため、東京藝大音楽学部邦楽科に入学。ひとまわり年下の学生たちと4年間大学生活を送る。
+                </li>
+                <li class="__item">卒業後は週末中心に演奏の仕事をしつつ、派遣社員としてOA事務を行っている。Excel・Wordとコピー機の使い方をよく聞かれる。
+                </li>
+                <li class="__item">現在も仕事を続けながら、テックアカデミー「Web制作実践コース」を受講中。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="works" class="works works__wrapper">
+      <div class="container works__container">
+        <h2 class="section__title Philosopher">Works<span class="Philosopher section__subtitle-jp">（随時追加中）</span></h2>
+        <div class="works__content d-grid-3columns">
+          <div class="works__item d-grid">
+            <a href="#" class="work__link">
+              <img src="./assets/images/tmb_LP2.png" alt="" class="work__img">
+            </a>
+            <time class="d-block" datetime="2024-05">2024.05</time>
+            <h3 class="works__work-title">架空の化粧品のLP<br class="sp-display-none"><span class="fsz-R">（スクール課題）</span></h3>
+            <p>XDのデザインカンプからの実装。ヘッダーがカンプにはなかったのですが、できるだけシンプルに、スクロールで自然にフェードアウトするように作成してみました。</p>
+          </div>
+          <div class="works__item d-grid">
+            <a href="#" class="work__link">
+              <img src="./assets/images/tmb_LP3.png" alt="" class="work__img">
+            </a>
+            <time class="d-block" datetime="2024-06">2024.06</time>
+            <h3 class="works__work-title">架空の脱毛サロンのLP<br class="sp-display-none"><span class="fsz-R">（スクール課題）</span>
+            </h3>
+            <p>Photoshopのデザインカンプから実装。キービジュアルのリキッドデザインに苦戦しましたが、この作品を機に対応ができるようになりました。</p>
+          </div>
+          <div class="works__item d-grid">
+            <a href="#" class="work__link">
+              <img src="./assets/images/tmb_website.png" alt="" class="work__img">
+            </a>
+            <time class="d-block" datetime="2024-06">2024.06</time>
+            <h3 class="works__work-title">架空の農業用ドローンの会社のWebサイト<span class="fsz-M">（スクール課題）</span></h3>
+            <p>Photoshopのデザインカンプからの実装。できるだけ細かいところもデザイン通りになっているか確認しました。架空の修正課題もありましたがスムーズに完了できました。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="skills">
+      <div class="container skills__container">
+        <h2 class="section__title">Skills
+          <span class="Philosopher section__subtitle-jp">（随時追加中）</span>
+        </h2>
+        <div class="skills__contents">
+          <div class="skills__icons skills__icons-web">
+            <img src="./assets/images/icon_web-group.png" alt="web">
+          </div>
+          <p class="skills__text-web">デザインカンプに沿ったコーディングができます。
+            jQuery/JavaScriptで簡単なアニメーションが可能です。
+            GitHub/sourcetreeでのソース管理は、commit、push、
+            mergeなどの基本的なことはできます。</p>
+          <div class="skills__icons skills__icons-office">
+            <img src="./assets/images/icon_office-group.png" alt="web">
+          </div>
+          <p class="skills__text-office">各種コミュニケーションツールとOffice、Illustratorは
+            現業務でも使用しています。</p>
+          <div class="skills__icons skills__icons-wpandphp">
+            <img src="./assets/images/icon_wpandphp.png" alt="web">
+          </div>
+          <p class="skills__text-wpandphp">WordPressとphpは勉強中です。</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <div class="contact__inner">
+        <picture class="contact__bg__wrapper">
+          <source media="(max-width: 768px)" srcset="./assets/images/bg_mizugaki_blend_sp.jpg">
+          <img src="./assets/images/bg_mizugaki_blend_pc.jpg" alt="contact" class="contact__img">
+        </picture>
+        <a href="/contact" class="button contact__button rounded-btn Philosopher fw-bold">Contact</a>
+      </div>
+    </section>
+  </main>
+  <!-- #footer -->
+  <footer class="footer">
+    <div class="container footer__container flex-column-center">
+      <small>&copy; Hiroko KOIZUMI all rights reserved.</small>
+    </div>
+  </footer>
+  <!-- js cdn -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>

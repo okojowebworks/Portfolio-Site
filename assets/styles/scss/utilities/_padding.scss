@@ -1,0 +1,62 @@
+@use '../foundation/variables' as *;
+@use '../foundation/function' as *;
+
+/* -------------------------------
+ *  padding指定 
+ * ---------------------------- */
+
+.m-0 {padding: 0;}
+.mx-0 {padding-left: 0; padding-right: 0;}
+.my-0 {padding-top: 0; padding-bottom: 0;}
+
+
+.pt-0 {padding-top: 0;}
+.pt-px {padding-top: rem(1);}
+.pt-1 {padding-top: rem(4);}
+.pt-2 {padding-top: rem(8);}
+.pt-3 {padding-top: rem(12);}
+.pt-4 {padding-top: rem(16);}
+.pt-5 {padding-top: rem(20);}
+.pt-6 {padding-top: rem(24);}
+.pt-7 {padding-top: rem(28);}
+.pt-8 {padding-top: rem(32);}
+.pt-9 {padding-top: rem(36);}
+.pt-10 {padding-top: rem(40);}
+.pt-11 {padding-top: rem(44);}
+.pt-12 {padding-top: rem(48);}
+
+.pb-0 {padding-bottom: 0;}
+.pb-px {padding-bottom: rem(1);}
+.pb-1 {padding-bottom: rem(4);}
+.pb-2 {padding-bottom: rem(8);}
+.pb-3 {padding-bottom: rem(12);}
+.pb-4 {padding-bottom: rem(16);}
+.pb-5 {padding-bottom: rem(20);}
+.pb-6 {padding-bottom: rem(24);}
+.pb-7 {padding-bottom: rem(28);}
+.pb-8 {padding-bottom: rem(32);}
+.pb-9 {padding-bottom: rem(36);}
+.pb-10 {padding-bottom: rem(40);}
+.pb-11 {padding-bottom: rem(44);}
+.pb-12 {padding-bottom: rem(48);}
+
+.pl-0 {padding-left: 0;}
+.pl-1 {padding-left: rem(4);}
+.pl-2 {padding-left: rem(8);}
+.pl-3 {padding-left: rem(12);}
+.pl-4 {padding-left: rem(16);}
+.pl-5 {padding-left: rem(20);}
+.pl-6 {padding-left: rem(24);}
+.pl-7 {padding-left: rem(28);}
+.pl-8 {padding-left: rem(32);}
+
+.pr-0 {padding-right: 0;}
+.pr-1 {padding-right: rem(4);}
+.pr-2 {padding-right: rem(8);}
+.pr-3 {padding-right: rem(12);}
+.pr-4 {padding-right: rem(16);}
+.pr-5 {padding-right: rem(20);}
+.pr-6 {padding-right: rem(24);}
+.pr-7 {padding-right: rem(28);}
+.pr-8 {padding-right: rem(32);}
+

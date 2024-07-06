@@ -1,0 +1,62 @@
+@use '../foundation/variables' as *;
+@use '../foundation/function' as *;
+
+/* -------------------------------
+ *  margin指定 
+ * ---------------------------- */
+
+.m-0 {margin: 0;}
+.mx-0 {margin-left: 0; margin-right: 0;}
+.my-0 {margin-top: 0; margin-bottom: 0;}
+
+
+.mt-0 {margin-top: 0;}
+.mt-px {margin-top: rem(1);}
+.mt-1 {margin-top: rem(4);}
+.mt-2 {margin-top: rem(8);}
+.mt-3 {margin-top: rem(12);}
+.mt-4 {margin-top: rem(16);}
+.mt-5 {margin-top: rem(20);}
+.mt-6 {margin-top: rem(24);}
+.mt-7 {margin-top: rem(28);}
+.mt-8 {margin-top: rem(32);}
+.mt-9 {margin-top: rem(36);}
+.mt-10 {margin-top: rem(40);}
+.mt-11 {margin-top: rem(44);}
+.mt-12 {margin-top: rem(48);}
+
+.mb-0 {margin-bottom: 0;}
+.mb-px {margin-bottom: rem(1);}
+.mb-1 {margin-bottom: rem(4);}
+.mb-2 {margin-bottom: rem(8);}
+.mb-3 {margin-bottom: rem(12);}
+.mb-4 {margin-bottom: rem(16);}
+.mb-5 {margin-bottom: rem(20);}
+.mb-6 {margin-bottom: rem(24);}
+.mb-7 {margin-bottom: rem(28);}
+.mb-8 {margin-bottom: rem(32);}
+.mb-9 {margin-bottom: rem(36);}
+.mb-10 {margin-bottom: rem(40);}
+.mb-11 {margin-bottom: rem(44);}
+.mb-12 {margin-bottom: rem(48);}
+
+.ml-0 {margin-left: 0;}
+.ml-1 {margin-left: rem(4);}
+.ml-2 {margin-left: rem(8);}
+.ml-3 {margin-left: rem(12);}
+.ml-4 {margin-left: rem(16);}
+.ml-5 {margin-left: rem(20);}
+.ml-6 {margin-left: rem(24);}
+.ml-7 {margin-left: rem(28);}
+.ml-8 {margin-left: rem(32);}
+
+.mr-0 {margin-right: 0;}
+.mr-1 {margin-right: rem(4);}
+.mr-2 {margin-right: rem(8);}
+.mr-3 {margin-right: rem(12);}
+.mr-4 {margin-right: rem(16);}
+.mr-5 {margin-right: rem(20);}
+.mr-6 {margin-right: rem(24);}
+.mr-7 {margin-right: rem(28);}
+.mr-8 {margin-right: rem(32);}
+

@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@use '../foundation/root' as *; //rootファイルの読み込み color css変数
+@use '../foundation/variables' as *; //変数ファイルの読み込み
+@use '../foundation/mixins' as *; //mixinファイルの読み込み
+@use '../utilities/display' as *;
+@use '../utilities/margin' as *;
+@use '../utilities/padding' as *;
+
+
+.l-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: layer-order('header');
+
+    background-color: var(--color-primary);
+    height: 70px;
+    display: grid;
+
+
+    @include media-query('md', max-width) {
+        height: 63px;
+    }
+}
+
+.l-header__container {
+    max-width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+
+    align-items: center;
+    justify-items: end;
+    place-content: center;
+    display: flex;
+    justify-content: space-between;
+
+    width: 90%;
+    
+    @include media-query('md', max-width) {
+        width: 100%;
+    }
+}

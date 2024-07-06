@@ -1,0 +1,21 @@
+
+@charset "UTF-8";
+
+@use '../foundation/root' as *;
+@use '../foundation/base' as *;
+@use '../foundation/variables' as *;
+@use '../foundation/mixins' as *;
+@use '../foundation/reset' as *;
+@use '../utilities/display' as *;
+
+
+
+/*-------------------------------
+ *  footer
+ * ---------------------------- */
+
+.l-footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}

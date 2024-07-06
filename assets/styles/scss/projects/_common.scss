@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@use '../foundation/variables' as *;
+@use '../foundation/mixins' as *;
+
+/* -------------------------------
+ *  pc画面(768px以上）で非表示
+ * ---------------------------- */
+.pc-display-none {
+
+    @include media-query('md', max-width) {
+        display: block;
+    }
+
+    @include media-query('md', min-width) {
+        display: none;
+    }
+}
+
+/* -------------------------------
+ *  sp画面(768px未満）で非表示
+ * ---------------------------- */
+.sp-display-none {
+    @include media-query('md', max-width) {
+        display: none;
+    }
+
+    @include media-query('md', min-width) {
+        display: block;
+    }
+}
+
+.section__title {
+  font-family: 'Philosopher', sans-serif;
+  font-size: $font-5XL;
+  color: var(--color-accent);
+
+  @include media-query('md', max-width) {
+      text-align: center;
+  }
+}
+
+.section__subtitle {
+  @extend .section__title;
+  font-size: $font-2XL;
+}
