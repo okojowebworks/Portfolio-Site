@@ -30,10 +30,8 @@ $('.scroll__header__logo').on('click', function (e) {
 });
 
 //リンクをクリック
-$('a[href^="#"]').on('click', function () {
+$('a[href="^#"]').on('click', function () {
   var elmHash = $(this).attr('href');
-  console.log("elmHash");
-  console.log(elmHash);
   var pos = $(elmHash).offset().top - 64;
   $('body,html').animate({ scrollTop: pos }, 400); //スクロールの速さ
   return false;
